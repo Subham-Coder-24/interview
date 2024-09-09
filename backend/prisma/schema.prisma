@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+
+model Interview {
+  id          Int         @id @default(autoincrement())
+  destination String
+  experience  String
+  user_id     String 
+  questions   Question[]
+}
+model Question{
+  id            Int         @id @default(autoincrement())
+  question      String
+  answer        String?
+  interview_id  Int
+  interview     Interview   @relation(fields: [interview_id], references: [id])
+  score         Int?
+}

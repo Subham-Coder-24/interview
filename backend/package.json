@@ -1,0 +1,32 @@
+{
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "prisma": "prisma",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:seed": "prisma db seed"
+  },
+  "dependencies": {
+    "@clerk/backend": "^1.9.2",
+    "@clerk/clerk-sdk-node": "^5.0.35",
+    "@google/generative-ai": "^0.17.1",
+    "@prisma/client": "^5.19.1",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.1.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "prisma": "^5.19.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
